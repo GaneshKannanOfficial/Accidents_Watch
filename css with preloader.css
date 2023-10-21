@@ -1,0 +1,305 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: 'WaterBrush' ;
+    src: url("../fonts/WaterBrush-Regular.ttf");
+}
+@font-face {
+    font-family: 'blanc';
+    src: url("../fonts/BLKCHCRY.TTF");
+}
+@font-face {
+    font-family: 'Ceviche' ;
+    src: url("../fonts/CevicheOne-Regular.ttf");
+}
+@font-face {
+    font-family: 'sugar';
+    src: url("../fonts/SugarpunchDEMO.otf");
+}
+@font-face {
+    font-family: 'mallister' ;
+    src: url(../fonts/Themallisterdemo-4B594.otf);
+}
+@font-face {
+    font-family:'mandala' ;
+    src: url("../fonts/Mandala.ttf");
+}
+#loading{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0) url('https://th.bing.com/th/id/R.bef9749a5d0fd6999aea4bb8f61e3594?rik=lyBRuOCZw38O3Q&riu=http%3a%2f%2forig14.deviantart.net%2f00af%2ff%2f2013%2f094%2ff%2f4%2floading_gif_by_zegerdon-d60eb1v.png&ehk=AzeYe6MyxpzPHdQJKySAkNmbM9Nk2U3oVC54BBkHHwM%3d&risl=&pid=ImgRaw&r=0') no-repeat center;
+    background-size: 20%;
+    z-index: 99999;
+}
+audio { display:none;}
+body{
+    background-size: 150% 150%;
+    animation: gradient 1s ease infinite;
+}
+.bdy{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 50px;
+    font-family: cursive;
+    background-color:rgb(229, 194, 193);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 3s;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #000;
+
+
+    animation-name: animate ;
+    animation-direction: alternate-reverse;
+    animation-duration: 25s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+
+}
+/* @keyframes animate{
+    0%{
+        background-image: url('../pics/6.jpg');
+    }
+    25%{
+        background-image: url('../pics/2.jpg');
+    }
+    50%{
+        background-image: url('../pics/3.jpg');
+    }
+    75%{
+        background-image: url('../pics/4.jpg');
+    }
+    100%{
+        background-image: url('../pics/7.jpg');
+    }
+
+} */
+table{
+    width:100%;
+}
+#back{
+    width: 10vh;
+    height: 7vh;
+    font-family: 'sugar';
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 10px 10px 10px #000;
+    color: #eee;
+    background: linear-gradient(90deg, rgba(192,0,255,1) 17%, rgba(51,0,180,1) 80%);
+}
+#back:hover{
+    background: linear-gradient(90deg, rgba(235,175,255,1) 17%, rgba(136,89,255,1) 80%);
+    color: #000;
+}
+#back:focus{
+    box-shadow: none;
+    transform: translateX(10px);
+    transform: translateY(10px);
+}
+.main{
+    width: 450px;
+    height: 570px;
+    overflow: hidden;
+    background: rgb(182, 102, 111);
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 1) 0px 30px 60px -12px inset, rgba(0, 0, 0, 1) 0px 18px 36px -18px inset;
+    opacity: 0.95;  
+    /* background:  linear-gradient(45deg, rgb(241, 45, 6) 40%, rgb(248, 3, 3) 60%); */
+    background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#chk{
+    position: relative;
+    display:none;
+}
+.signup{
+    position: relative;
+    width:100%;
+    height:100%
+}
+label{
+    color: #fff;
+    font-size: 2.3em;
+    justify-content: center;
+    display: flex;
+    margin: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+input{
+    width: 60%;
+    height: 20px;
+    background: #e0dede;
+    justify-content:center;
+    display:flex;
+    margin: 20px auto;
+    padding: 20px;
+    border: none;
+    outline:none;
+    border-radius:5px;
+}
+#role{
+    width: 65%;
+    height: 40px;
+    background: #e0dede;
+    justify-content:center;
+    display:flex;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    outline:none;
+    border-radius:5px;
+}
+#loginbtn{
+    width: 30%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    /* color: #fff; */
+    background: #ffffff;
+    /* background-size: 300%; */
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+    /* outline: none; */
+    border: 2px solid white;
+    border-radius:20px;
+    transition: .5s;
+    cursor: pointer;
+    background-position: left;
+    transition: background-position 1s;
+    box-shadow: 5px 5px 5px #000;
+    /* background-color: #ddd; */
+  /* border: none; */
+  color: black;
+  /* padding: 16px 32px; */
+  text-align: center;
+  font-size: 16px;
+  /* margin: 4px 2px; */
+  transition: 0.3s;
+}
+#loginbtn:hover{
+    background: #000000;
+    color: white;
+    border: 2px solid black;
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+}
+#loginbtn:focus{
+    box-shadow: none;
+    transform: translateX(10px);
+    transform: translateY(10px);
+    font-size: larger;
+    border-style: inset;
+}
+#signupbtn{
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: linear-gradient(90deg, rgb(0, 0, 0) 33%, rgb(245, 249, 249) 67%);
+    background: linear-gradient(90deg, rgb(255, 255, 255) 33%, rgb(53, 54, 54) 67%);
+    background-size: 300%;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 10px;
+    
+    outline: none;
+    border: none;
+    border-radius:5px;
+    transition: .2s ease-in;
+    cursor: pointer;
+    background-position: left;
+    transition: background-position 1s;
+    box-shadow: 5px 5px 5px #000;
+}
+#signupbtn:hover{
+    color: #e0dede;
+    background-position: right;
+}
+#signupbtn:focus{
+    box-shadow: none;
+    transform: translateX(10px);
+    transform: translateY(10px);
+    font-size: smaller;
+    border-style: inset;
+}
+.login{
+    height: 750px;
+    background: #eee;
+    border-radius: 70% / 3%;
+    transform: translateY(-180px);
+    transition: .8s ease-in-out;
+    align-items: center;
+}
+.login label{
+    color:#573b8a;
+    transform: scale(.6);    
+}
+#chk:checked ~ .login{
+    transform: translateY(-580px);
+}
+#chk:checked ~ .login label{
+    transform: scale(1);
+}
+#chk:checked ~ .signup label{
+    transform: scale(.6);
+}
+.logo{
+    height: 100px;
+    width: 150px;
+    position: relative;
+      top: 0;
+      left: 0;
+}
+h6{
+    position: relative;
+    align-self: center;
+    border: none;
+}
+h1{
+    font-size: 50px;
+    font-family: 'mallister';
+    text-shadow: 10px 3px  rgb(246, 10, 10);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; 
+}
+table{
+    background: linear-gradient(90deg, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.4) 100%);
+    border-radius: 20px;
+    padding-right: 20px;
+}
+#logobox{
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 3px #000;
+    background:linear-gradient(90deg, rgba(73,101,54,1) 0%, rgba(105,181,53,1) 100%);
+}
+
+td #quo{
+    border: inset 5px;
+}

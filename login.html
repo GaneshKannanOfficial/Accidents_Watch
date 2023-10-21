@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Accident Report Login</title>
+    
+        body {
+            background-color: black;
+            color: white;
+            font-family: sans-serif;
+        }
+        .form-container {
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+            transition: all 0.5s ease;
+        }
+        .form-container.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        form {
+            display: inline-block;
+            margin-top: 20px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: none;
+            border-bottom: 2px solid white;
+            background-color: black;
+            color: white;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: white;
+            color: black;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #ddd;
+        }
+        .form-switch {
+            margin-top: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            color: white;
+            transition: all 0.5s ease;
+        }
+        .form-switch:hover {
+            color: #ddd;
+        }
+        #google-button {
+            background-color: #4285f4;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #google-button:hover {
+            background-color: #357ae8;
+        }
+    </style>
+</head>
+<body>
+    
+<div class="form-container">
+    <form id="manager-form">
+        <h2>Manager Login</h2>
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <input type="submit" value="Login">
+        <button id="google-button" onclick="googleSignIn()">
+            Sign in with Google
+        </button>
+    </form>
+    <form id="user-form" class="hidden">
+        <h2>User Login</h2>
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <input type="submit" value="Login">
+        <button id="google-button1" onclick="googleSignIn()">
+            Sign in with Google
+        </button>
+    </form>
+    <div class="form-switch" onclick="switchForm()">Switch to User Login</div>
+</div>
+<script type="text/javascript">
+    function switchForm() {
+        var managerForm = document.getElementById("manager-form");
+        var userForm = document.getElementById("user-form");
+        if (managerForm.classList.contains("hidden")) {
+            managerForm.classList.remove("hidden");
+            userForm.classList.add("hidden");
+        } else {
+            managerForm.classList.add("hidden");
+            userForm.classList.remove("hidden");
+        }
+    }
+    function googleSignIn() {
+        
+    }
+</script>
+</body>
+</html>
